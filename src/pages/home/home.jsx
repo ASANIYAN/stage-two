@@ -1,3 +1,4 @@
+import Footer from "../../components/footer/footer";
 import Featured from "../../components/home/featured";
 import Hero from "../../components/home/hero";
 import NavBar from "../../components/navbar/navbar";
@@ -20,6 +21,7 @@ const Home = () => {
             <section className="mt-10 px-3 lg:px-6 xl:px-20">
                 <Featured />
             </section>
+            <Footer />
         </main>
     );
 }

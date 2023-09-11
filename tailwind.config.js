@@ -12,6 +12,7 @@ export default {
         'color1': '#BE123C',
         'color2': '#9CA3AF',
         'color3': '#111827',
+        'color4': '#6B7280',
       }, 
       screens: {
         'xxxs': '280px',

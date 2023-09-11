@@ -12,7 +12,7 @@ const MovieItem = () => {
                 
                 <h4 className="text-color3 text-lg font-semibold text-center 840:text-start"> Stranger Things </h4>
 
-                <section className="flex items-center justify-center 840:justify-start gap-2.5 mt-4">
+                <section className="flex items-center justify-center 840:justify-between gap-2.5 mt-4">
                     <section className="flex items-center gap-1.5"> 
                         <img src={imdb} alt="imdb-icon" /> 
                         <p className="font-normal text-xs"> 86.0 / 100 </p>
