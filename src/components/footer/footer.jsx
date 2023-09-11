@@ -1,16 +1,27 @@
+import { Fragment } from "react";
 import fb from "../../assets/fb.svg";
 import insta from "../../assets/insta.svg";
 import twitter from "../../assets/twitter.svg";
 import youtube from "../../assets/youtube.svg";
 
 const Footer = () => {
+    const images = [
+        { src: fb, alt:"facebook-icon"},
+        { src: insta, alt:"instagram-icon"},
+        { src: twitter, alt:"twitter-icon"},
+        { src: youtube, alt:"youtube-icon"},
+    ]
+
+
     return (
         <footer className="flex flex-col justify-center items-center gap-6 mt-20 mb-5">
             <section className="flex items-center gap-8">
-                <img src={fb} width={24} height={24} alt="facebook-icon" />
-                <img src={insta} width={24} height={24} alt="instagram-icon" />
-                <img src={twitter} width={24} height={24} alt="twitter-icon" />
-                <img src={youtube} width={24} height={24} alt="youtube-icon" />
+                { images.map((image) => (
+                    <Fragment key={image.alt}>
+                        <img src={image.src} width={24} height={24} alt={image.alt} />
+                    </Fragment>
+                ))
+                }
             </section>
 
             <section className="flex flex-col xs:flex-row items-center gap-5 text-color3 text-lg font-semibold ">
