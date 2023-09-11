@@ -1,0 +1,5 @@
+.top {
+    background: url("/src/assets/poster.png") no-repeat;
+    background-position: top;
+    background-size: cover;
+}
