@@ -10,6 +10,8 @@ export default {
     extend: {
       colors: {
         'color1': '#BE123C',
+        'color2': '#9CA3AF',
+        'color3': '#111827',
       }, 
       screens: {
         'xxxs': '280px',
@@ -20,6 +22,8 @@ export default {
          // => @media (min-width: 480px) { ... }
         's': '576px',
          // => @media (min-width: 576px) { ... }
+        '840': '840px',
+         // => @media (min-width: 840px) { ... }
         ...defaultTheme.screens
       }, 
     },
