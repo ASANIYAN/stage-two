@@ -21,6 +21,13 @@ export default {
         'color10': 'rgba(190, 18, 60, 0.20)',
         'color11': 'rgba(0, 0, 0, 0.30)',
         'color12': '#333',
+        'color13': '#404040',
+        'color14': '#B91C1C',
+        'color15': '#F8E7EB',
+        'color16': '#E8E8E8',
+        'color17': '#C7C7C7',
+        'color18': 'rgba(255, 255, 255, 0.80)',
+        'color19': 'rgba(18, 18, 18, 0.50)',
       }, 
       screens: {
         'xxxs': '280px',
@@ -33,6 +40,8 @@ export default {
          // => @media (min-width: 576px) { ... }
         '840': '840px',
          // => @media (min-width: 840px) { ... }
+        '1100': '1100px',
+         // => @media (min-width: 1100px) { ... }
         ...defaultTheme.screens
       }, 
     },
