@@ -6,7 +6,7 @@ const NavBar = () => {
         <nav className="flex flex-wrap gap-2.5 items-center justify-center sm:justify-between pt-4">
             <section className="flex items-center gap-2">
                 <img src={home_logo} width={50} height={50} alt="home_icon" />
-                <p className="text-xl font-smibold text-white"> MovieBox </p>
+                <p className="text-xl font-bold text-white"> MovieBox </p>
             </section>
             <SearchBar />
             <section className="flex items-center gap-2.5">
