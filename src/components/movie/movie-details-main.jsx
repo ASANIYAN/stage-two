@@ -3,19 +3,18 @@ import { ArrowDown2 } from "iconsax-react";
 import two_tickets from "../../assets/two_tickets.svg";
 import list from "../../assets/list.svg";
 import list_white from "../../assets/list_white.svg";
+import PropTypes from "prop-types";
 
 import "./movie-details-main.css";
 
-const MovieDetailsMain = () => {
+const MovieDetailsMain = ({ data }) => {
+    const { overview,  } = data;
+
     return (
         <section className="flex flex-wrap gap-2.5 mt-10 mb-5">
             
             <section className="w-full 1100:w-[65%]">
-                <p className="text-color12 text-base sm:text-lg lg:text-xl font-normal">
-                    After thirty years, Maverick is still pushing the envelope as a top naval aviator, 
-                    but must confront ghosts of his past when he leads TOP GUN&apos;s elite graduates on a mission that 
-                    demands the ultimate sacrifice from those chosen to fly it.
-                </p>
+                <p data-testid="movie-overview" className="text-color12 text-base sm:text-lg lg:text-xl font-normal"> {overview} </p>
 
                 <section className="flex flex-col gap-5 mt-5 text-base sm:text-lg lg:text-xl">
                     <p className="text-color12 font-normal"> 
@@ -23,6 +22,9 @@ const MovieDetailsMain = () => {
                     </p>
                     <p className="text-color12 font-normal"> 
                         Writers: <span className="text-color1"> Joseph Kosinski </span> <span className="text-color1"> Joseph Kosinski </span> 
+                    </p>
+                    <p className="text-color12 font-normal"> 
+                        Stars: <span className="text-color1"> Joseph Kosinski </span> <span className="text-color1"> Joseph Kosinski </span> 
                     </p>
                 </section>
                 
@@ -71,6 +73,11 @@ const MovieDetailsMain = () => {
 
         </section>
     );
+}
+
+
+MovieDetailsMain.propTypes = {
+    data: PropTypes.object
 }
  
 export default MovieDetailsMain;

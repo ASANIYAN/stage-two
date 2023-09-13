@@ -1,15 +1,33 @@
-import star from "../../assets/star.svg"
+import star from "../../assets/star.svg";
 
-const MovieDetailsTop = () => {
+import PropTypes from "prop-types"
+
+const MovieDetailsTop = ({ data }) => {
+    const { title, release_date, runtime, genres }  = data;
+
+    const releaseDateInUTC = new Date(release_date).getTime().toString();
+
     return (
         <section className="flex flex-wrap gap-2.5 items-center justify-between mt-10">
             <section className="flex flex-wrap items-center gap-2.5">
                 <section className="flex flex-wrap items-center gap-2.5 font-medium text-base sm:text-lg lg:text-xl text-color13">
-                    <span> Top Gun: Maverick </span> • <span> 2022 </span>  <span> • </span>  <span> PG-13</span>  <span> • </span> <span> 2h 10m </span>
+                    { title && <span data-testid="movie-title" > {title} </span>} 
+                    <span> • </span> 
+                    <span> {release_date} </span>  
+                    <span> • </span>  
+                    { releaseDateInUTC && <span data-testid="movie-release-date"> {releaseDateInUTC} </span> }  
+                    <span> • </span> 
+                    { runtime && <span data-testid="movie-runtime"> {runtime} </span>}
+                    <span> m </span>
                 </section>
                 <section className="flex items-center gap-2.5">
-                    <div className="border border-color15 rounded-[15px] py-0.5 px-2.5">  <p className="text-color14 font-medium text-sm"> Action </p> </div>
-                    <div className="border border-color15 rounded-[15px] py-0.5 px-2.5">  <p className="text-color14 font-medium text-sm"> Drama </p> </div>
+                    { genres && genres.map((genre) => (
+                        <div key={genre.id} 
+                            className="border border-color15 rounded-[15px] py-0.5 px-2.5"
+                        >  
+                                <p className="text-color14 font-medium text-sm"> {genre.name} </p> 
+                        </div>
+                    ))}
                 </section>
             </section>
             <section className="flex items-center gap-2">
@@ -19,6 +37,10 @@ const MovieDetailsTop = () => {
             </section>
         </section>
     );
+}
+
+MovieDetailsTop.propTypes = {
+    data: PropTypes.object
 }
  
 export default MovieDetailsTop;

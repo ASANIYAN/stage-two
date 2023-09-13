@@ -8,6 +8,7 @@ import "./home.css";
 
 
 const Home = () => {
+
     return (
         <main>
             <section className="top h-[600px]">
