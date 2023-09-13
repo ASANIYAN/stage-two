@@ -28,7 +28,7 @@ const MovieDetailsMain = ({ data }) => {
                     </p>
                 </section>
                 
-                <section className="flex flex-wrap items-center border border-color17 mt-4 rounded-[10px]">
+                <section className="flex flex-wrap items-center border border-color17 mt-6 rounded-[10px]">
                     <div className="bg-color1 w-full xs:w-fit rounded-[10px] p-3">
                         <p className="text-white text-base sm:text-lg lg:text-xl font-medium"> Top rated movie #65 </p>
                     </div>
