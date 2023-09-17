@@ -12,7 +12,6 @@ import Loader from "../../components/loader/loader";
 const Movie = () => {
     const { id } = useParams()
     const { data, loading, error } = useMovieDetail(id);
-    console.log(data);
 
     return (
         <main className="flex flex-nowrap h-screen">

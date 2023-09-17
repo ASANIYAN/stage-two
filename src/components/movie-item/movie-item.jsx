@@ -21,7 +21,7 @@ const MovieItem = ({ data }) => {
 
     const displayLikeIcon = () => {
         if (like) {
-            return  <Heart color="#be123c" variant="Bold" onClick={handleLike} className="absolute top-3 right-3 z-20 cursor-pointer" />;
+            return  <Heart color="#be123c" variant="Bold" onClick={handleLike} className="absolute top-3 right-3 z-20 cursor-pointernpm " />;
         } else {
             return <Heart color="#be123c" onClick={handleLike} className="absolute top-3 right-3 z-20 cursor-pointer" />;
         }

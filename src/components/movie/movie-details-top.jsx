@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const MovieDetailsTop = ({ data }) => {
     const { title, release_date, runtime, genres }  = data;
 
-    const releaseDateInUTC = new Date(release_date).getTime().toString();
+    const releaseDateInUTC = new Date(release_date).toUTCString();
 
     return (
         <section className="flex flex-wrap gap-2.5 items-center justify-between mt-10">
